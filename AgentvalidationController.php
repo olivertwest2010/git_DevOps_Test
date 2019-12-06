@@ -136,3 +136,8 @@ class AgentValidationController extends Controller
         }
     }
 }
+if (($model = AgentValidation::findOne($id)) !== null) {
+            return $model;
+        } else {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
